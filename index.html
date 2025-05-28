@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminho da Leitura</title>
+    <meta name="description" content="Liberte seu potencial de leitura! Caminho da Leitura torna o aprendizado de leitura uma jornada prazerosa e acessível para adultos semialfabetizado, transformando o 'saber ler' em autonomia para o dia a dia.">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Caminho da Leitura">
+    <meta property="og:description" content="Caminho da Leitura - Uma jornada prazerosa e acessível para adultos semialfabetizado.">
+    <meta property="og:image" content="img/graph.png">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link id="style" rel="stylesheet" href="style.css?v=1">
+    <script src="js/sentencesData.js?v=1"></script>
+    <script src="js/wordsData.js?v=1"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1 class="app-title">Caminho da Leitura</h1>
+        <p class="app-subtitle">Ponte para o conhecimento. Leitura acessível e inspiradora.</p>
+    </div>
+    <div class="level-selector">
+        <button id="level_box" class="level-btn active">Nível 1 - Palavras</button>
+    </div>
+
+    <div class="exercise-area fade-in" id="exerciseArea">
+        <!-- Nível 1 Content -->
+        <div id="word_level_box" class="level-content">
+            <div class="word-display">
+                <div class="complete-word" id="completeWord"></div>
+                <div class="syllables" id="syllables"></div>
+            </div>
+        </div>
+
+        <!-- Nível 2 Content -->
+        <div id="sentence_level_box" class="level-content" style="display: none;">
+            <div class="sentence-display" id="sentence">
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="control-btn listen-btn" onclick="playAudio()">
+            <span class="speaker-icon"></span>
+            Ouvir
+        </button>
+        <button class="control-btn next-btn" onclick="nextExercise()">
+            <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+            Próxima
+        </button>
+    </div>
+    <div class="progress">
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill" style="width: 0.5%"></div>
+        </div>
+
+        <div class="progress-text" id="progressText">Progresso:</div>
+    </div>
+</div>
+<script src="js/script.js?v=1"></script>
+</body>
+</html>
